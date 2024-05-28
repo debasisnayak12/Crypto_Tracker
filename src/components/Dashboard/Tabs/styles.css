@@ -1,0 +1,49 @@
+.grid-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1.5rem 2rem;
+}
+.list-table{
+    width: 85%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.not-found{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.not-found button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--blue);
+    border: none;
+    cursor: pointer;
+}
+.item-not-found {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--white);
+    padding: 1.5rem;
+  }
+
+@media only screen and (max-width: 1200px) {
+    .list-table{
+        width: 95%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .list-table{
+        width: 100%;
+        margin-left: 0;
+        padding: 0 !important;
+    }
+}
+

@@ -1,0 +1,13 @@
+.loader-component{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--black);
+    color: var(--blue);
+    z-index: 1000;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}

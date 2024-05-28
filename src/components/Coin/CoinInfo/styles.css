@@ -1,0 +1,29 @@
+.coin-info-page {
+  display: block;
+  width: 90%;
+  margin: 1rem auto;
+  background-color: var(--darkgrey);
+  border-radius: 0.8rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.coin-info-desc{
+    cursor: pointer;
+}
+
+.coin-info-desc a {
+    text-decoration: underline !important;
+}
+
+.coin-info-desc a:hover {
+    color: var(--blue) !important;
+}
+
+@media only screen and (max-width: 800px) {
+    .coin-info-heading{
+        font-size: 1.2rem;
+    }
+    .coin-info-desc {
+        font-size: 0.75rem;
+    }
+}

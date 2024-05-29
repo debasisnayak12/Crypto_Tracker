@@ -7,23 +7,45 @@
 }
 .grid-container:hover{
     border-color: var(--green);
+    transform: scale(1.03);
     transition: all 0.3s;
 }
 .grid-container-red:hover{
     border-color: var(--red);
+    transform: scale(1.03);
     transition: all 0.3s;
 }
 .info-flex{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     gap: 1rem;
     margin: 1rem 1.5rem;
+}
+.left-side{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
 }
 .name-info{
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
+}
+.watchlist{
+    border: 2px solid;
+   border-color: var(--green);
+   border-radius: 50%;
+   padding: 0.5rem;
+   cursor: pointer;
+}
+.watchlist-red{
+    border: 2px solid;
+   border-color: var(--red);
+   border-radius: 50%;
+   padding: 0.5rem;
+   cursor: pointer;
 }
 .coin-logo{
     height: 3.5rem;

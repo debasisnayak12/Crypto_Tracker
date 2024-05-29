@@ -1,0 +1,21 @@
+.footer-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #14baf3;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    padding: 0rem 1rem;
+    width: 85%;
+}
+.footer-flex p{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.footer-icons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}

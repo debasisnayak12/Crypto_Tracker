@@ -5,6 +5,7 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Grid from "../Grid";
 import List from "../List";
+
 import "./styles.css";
 
 export default function TabsComponent({ coins, clearSearch }) {
@@ -20,7 +21,7 @@ export default function TabsComponent({ coins, clearSearch }) {
     fontSize: "1.2rem",
     fontFamily: "Inter",
     textTransform: "Capitalize",
-  };
+  }
 
   return (
     <div>

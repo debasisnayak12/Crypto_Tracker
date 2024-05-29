@@ -12,9 +12,13 @@
     transition: all 0.3s;
 }
 
-.list-row td{
+.list-row .col{
     width: 18%;
     text-align: left;
+}
+.watchlist{
+    border-radius: 50% !important;
+    margin-left: 0.5rem;
 }
 .td-image{
     width: 3rem !important;
@@ -72,20 +76,25 @@
     }
     .chip-flex {
         margin-right: 1rem;
-        margin-left: 0.75rem;
+        margin-left: 1rem;
     }
     .chip-price{
         font-size: 0.65rem;
         padding: 0.25rem;
     }
     .coin-price{
-        font-size: 0.65rem;
+        font-size: 1rem;
         margin-right: 0.5rem;
-        text-align: right;
     }
     .total-volume{
         font-size: 0.8rem;
+        margin-right: 0.5rem;
     }
+    .watchlist, .watchlist-red{
+        padding: 0.1rem;
+        font-size: 0.25rem;
+    }
+    
     
 }
 

@@ -3,6 +3,7 @@ import Header from "../components/Common/Header";
 import MainComponent from "../components/LandingPage/MainComponent";
 
 const HomePage = () => {
+ 
   return (
     <div>
         <Header />

@@ -74,6 +74,7 @@ img {
   gap: 2rem;
 }
 
+
 @media only screen and (max-width: 800px) {
   .coins-days-flex {
     justify-content: space-between;

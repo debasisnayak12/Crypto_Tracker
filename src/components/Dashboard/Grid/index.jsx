@@ -4,6 +4,7 @@ import TrendingDownRoundedIcon from "@mui/icons-material/TrendingDownRounded";
 import "./styles.css";
 import { Link } from "react-router-dom";
 import GradeRoundedIcon from "@mui/icons-material/GradeRounded";
+import { toast } from "react-toastify";
 
 const Grid = ({ coin }) => {
   const [clicked, setClicked] = useState(false);
@@ -20,9 +21,11 @@ const Grid = ({ coin }) => {
     if(clicked){
       const newWatchlist = watchlist.filter((item) => item.id !== coin.id);
       localStorage.setItem("watchlist",JSON.stringify(newWatchlist));
+      toast.info(`${coin.name} remove from watchlist`);
     }else{
       watchlist.push(coin);
       localStorage.setItem("watchlist",JSON.stringify(watchlist));
+      toast.success(`${coin.name} added to watchlist`);
     }
     setClicked(!clicked);
   };

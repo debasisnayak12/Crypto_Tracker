@@ -1,32 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ArrowUpwardRoundedIcon from "@mui/icons-material/ArrowUpwardRounded";
 import "./styles.css";
 
 const BackToTop = () => {
-  let mybutton = document.getElementById("myBtn");
+  const [isVisible, setIsVisible] = useState(false);
 
-  window.onscroll = function () {
-    scrollFunction();
-  };
-
-  function scrollFunction() {
+  const scrollFunction = () => {
     if (
       document.body.scrollTop > 20 ||
       document.documentElement.scrollTop > 20
     ) {
-      mybutton.style.display = "flex";
+      setIsVisible(true);
     } else {
-      mybutton.style.display = "none";
+      setIsVisible(false);
     }
-  }
+  };
 
-  function topFunction() {
+  const topFunction = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-  }
-  
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollFunction);
+    return () => {
+      window.removeEventListener("scroll", scrollFunction);
+    };
+  }, []);
+
   return (
-    <div className="back-to-top" id="myBtn" onClick={()=>topFunction()}>
+    <div
+      className="back-to-top"
+      id="myBtn"
+      onClick={topFunction}
+      style={{ display: isVisible ? "flex" : "none" }}
+    >
       <ArrowUpwardRoundedIcon style={{ color: "var(--blue)" }} />
     </div>
   );

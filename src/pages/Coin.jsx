@@ -34,7 +34,7 @@ const CoinPage = () => {
     if (data) {
       convertObject(setCoinData, data);
       const prices = await getCoinPrices(id, days, priceType);
-      if (prices) {
+      if (prices.length > 0) {
         settingChartData(setChartData, prices);
         setIsLoading(false);
       }
@@ -46,7 +46,7 @@ const CoinPage = () => {
     setIsLoading(true);
     setDays(event.target.value);
     const prices = await getCoinPrices(id, event.target.value, priceType);
-      if (prices) {
+      if (prices.length > 0) {
        settingChartData(setChartData, prices);
         setIsLoading(false);
       }
@@ -57,7 +57,7 @@ const CoinPage = () => {
     setIsLoading(true);
     setPriceType(newType);
     const prices = await getCoinPrices(id, days, newType);
-      if (prices) {
+      if (prices.length > 0) {
        settingChartData(setChartData, prices);
         setIsLoading(false);
       }

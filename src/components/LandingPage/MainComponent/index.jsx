@@ -5,7 +5,7 @@ import phone from "../../../assets/phone.png";
 import gradient from "../../../assets/gradient.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import ShareButton from "../../Common/ShareButton";
+import { RWebShare } from "react-web-share";
 
 const MainComponent = () => {
   return (
@@ -45,7 +45,15 @@ const MainComponent = () => {
           <Link to="/dashboard">
             <Button text={"Dashboard"} />
           </Link>
-          <ShareButton/>
+          <RWebShare
+            data={{
+              text: "Crypto Tracker",
+              url: "https://crypto-tracker-ashen-one.vercel.app/",
+              title: "Crypto Tracker",
+            }}
+          >
+            <Button text={"Share 🔗"} outlined={true} />
+          </RWebShare>
         </motion.div>
       </div>
       <div className="phone-component">
